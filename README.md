@@ -13,35 +13,36 @@ Estimate the cost of publishing a package
 This is currently an unimplemented stub library
 
 <!-- toc -->
+* [publish-cost](#publish-cost)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g foo
-$ foo COMMAND
+$ npm install -g publish-cost
+$ cost COMMAND
 running command...
-$ foo (-v|--version|version)
-foo/0.0.0 darwin-x64 node-v14.17.0
-$ foo --help [COMMAND]
+$ cost (-v|--version|version)
+publish-cost/0.0.1 darwin-x64 node-v14.17.0
+$ cost --help [COMMAND]
 USAGE
-  $ foo COMMAND
+  $ cost COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`foo hello`](#foo-hello)
-* [`foo help [COMMAND]`](#foo-help-command)
+* [`cost hello`](#cost-hello)
+* [`cost help [COMMAND]`](#cost-help-command)
 
-## `foo hello`
+## `cost hello`
 
 Describe the command here
 
 ```
 USAGE
-  $ foo hello
+  $ cost hello
 
 OPTIONS
   -n, --name=name  name to print
@@ -51,15 +52,15 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/msluther/foo/blob/v0.0.0/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/msluther/publish-cost/blob/v0.0.1/src/commands/hello.js)_
 
-## `foo help [COMMAND]`
+## `cost help [COMMAND]`
 
-display help for foo
+display help for cost
 
 ```
 USAGE
-  $ foo help [COMMAND]
+  $ cost help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
