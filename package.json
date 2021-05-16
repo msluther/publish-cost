@@ -3,10 +3,19 @@
   "description": "Estimate the cost of publishing a package",
   "version": "0.0.1",
   "main": "src/index.js",
+  "bin": {
+    "foo": "./bin/run"
+  },
+  "engines": {
+    "node": ">14.0.0"
+  },
   "scripts": {
     "test": "nyc npm run test:mocha",
     "test:mocha": "mocha \"test/**/*.test.js\"",
-    "posttest": "eslint --fix \"{bin,src,test}/**/*.js?(on)\""
+    "posttest": "eslint --fix .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "postpack": "rm -f oclif.manifest.json",
+    "version": "oclif-dev readme && git add README.md"
   },
   "author": "Michael Luther",
   "bugs": {
@@ -31,10 +40,25 @@
     "url": "git+https://github.com/msluther/publish-cost.git"
   },
   "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "@oclif/test": "^1.2.8",
     "assume": "^2.3.0",
     "eslint": "^7.26.0",
+    "eslint-config-oclif": "^3.1.0",
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
     "sinon": "^10.0.0"
+  },
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.2"
+  },
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "cost",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
   }
 }
