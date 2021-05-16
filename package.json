@@ -48,6 +48,7 @@
     "@oclif/dev-cli": "^1.26.0",
     "@oclif/test": "^1.2.8",
     "assume": "^2.3.0",
+    "chai": "^4.3.4",
     "eslint": "^7.26.0",
     "eslint-config-oclif": "^3.1.0",
     "mocha": "^8.4.0",
