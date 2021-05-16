@@ -1,31 +1,40 @@
 {
   "name": "publish-cost",
-  "version": "0.0.1",
   "description": "Estimate the cost of publishing a package",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc npm run test:mocha",
+    "test:mocha": "mocha \"test/**/*.test.js\"",
+    "posttest": "eslint --fix \"{bin,src,test}/**/*.js?(on)\""
   },
+  "author": "Michael Luther",
+  "bugs": {
+    "url": "https://github.com/msluther/publish-cost/issues"
+  },
+  "homepage": "https://github.com/msluther/publish-cost#readme",
+  "keywords": [
+    "audit",
+    "build",
+    "ci",
+    "cost",
+    "electricity",
+    "environmental",
+    "node",
+    "npm",
+    "publish",
+    "security"
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/msluther/publish-cost.git"
   },
-  "keywords": [
-    "npm",
-    "node",
-    "publish",
-    "cost",
-    "electricity",
-    "ci",
-    "build",
-    "security",
-    "audit",
-    "environmental"
-  ],
-  "author": "Michael Luther",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/msluther/publish-cost/issues"
-  },
-  "homepage": "https://github.com/msluther/publish-cost#readme"
+  "devDependencies": {
+    "assume": "^2.3.0",
+    "eslint": "^7.26.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "sinon": "^10.0.0"
+  }
 }
